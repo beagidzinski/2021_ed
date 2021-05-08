@@ -15,10 +15,26 @@ public class PilhaVetor {
     }
 
     public boolean estaCheio() {
-        if (this.topo == this.capacidade) {
-            return true;
-        }
+       return this.topo == this.capacidade;
+    }
 
-        return false;
+    public boolean estaVazia() {
+        return this.topo == 0;
+    }
+
+    public void push(int i) {
+        this.dados[this.topo++] = i;
+    }
+
+    public int pull() {
+        return this.dados[--topo];
+    }
+
+    public int tamanho() {
+        return this.topo;
+    }
+
+    public int topo() {
+        return this.dados[this.topo-1];
     }
 }
